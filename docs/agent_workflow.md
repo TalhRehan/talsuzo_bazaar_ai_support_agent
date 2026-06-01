@@ -42,6 +42,12 @@ OPENAI_MODEL=gpt-4o-mini
 
 If no API key is configured, the agent uses a deterministic fallback summary so local development and tests still work.
 
+When using Docker Compose, set `OPENAI_API_KEY` in a root `.env` file or export it in your shell before running:
+
+```bash
+docker compose up --build
+```
+
 ## Required Outcomes
 
 Every request must end as one of:

@@ -64,6 +64,20 @@ def test_unknown_customer_is_denied() -> None:
     assert "CUSTOMER_NOT_FOUND" in decision["matched_rules"]
 
 
+def test_unknown_order_is_denied() -> None:
+    request = make_request(order_id="ORD-9999")
+
+    decision = evaluate_policy(
+        request,
+        find_customer_by_email(str(request.customer_email)),
+        None,
+        today=date(2026, 6, 1),
+    )
+
+    assert decision["status"] == "denied"
+    assert "ORDER_NOT_FOUND" in decision["matched_rules"]
+
+
 def test_order_customer_mismatch_is_denied() -> None:
     request = make_request(customer_email="daniel.brooks@example.com", order_id="ORD-5001")
 
@@ -166,3 +180,21 @@ def test_pending_refund_is_escalated() -> None:
 
     assert decision["status"] == "escalated"
     assert "PENDING_REFUND_ESCALATION" in decision["matched_rules"]
+
+
+def test_repeated_refund_abuse_risk_is_escalated() -> None:
+    request = make_request(
+        customer_email="lina.chen@example.com",
+        order_id="ORD-5018",
+        product_id="PROD-2020",
+    )
+
+    decision = evaluate_policy(
+        request,
+        find_customer_by_email(str(request.customer_email)),
+        find_order_by_id(request.order_id),
+        today=date(2026, 6, 1),
+    )
+
+    assert decision["status"] == "escalated"
+    assert "REFUND_ABUSE_RISK_ESCALATION" in decision["matched_rules"]

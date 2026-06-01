@@ -8,6 +8,8 @@ This document defines the planned API contract between the Next.js frontend and 
 http://localhost:4000/api
 ```
 
+Docker Compose exposes the same backend URL on the host machine.
+
 Frontend environment variable:
 
 ```env
@@ -40,6 +42,12 @@ Response:
     "environment": "local"
   }
 }
+```
+
+Interactive backend docs are available at:
+
+```text
+http://localhost:4000/docs
 ```
 
 ## Create Refund Request

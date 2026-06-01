@@ -69,3 +69,23 @@ Responsibilities:
 ## Shared Contracts
 
 The `packages/shared` folder is reserved for shared API contracts. It will help frontend and backend developers keep request/response shapes aligned.
+
+## Docker Runtime
+
+The complete project is runnable with one command:
+
+```bash
+docker compose up --build
+```
+
+Services:
+
+```text
+frontend: http://localhost:3000
+backend:  http://localhost:4000
+docs:     http://localhost:4000/docs
+```
+
+The frontend service is built from the root `Dockerfile`. It runs the existing Next.js ecommerce app.
+
+The backend service is built from `apps/api/Dockerfile`. It runs FastAPI, serves refund support endpoints, loads synthetic JSON data, and exposes generated API documentation through Swagger UI.
