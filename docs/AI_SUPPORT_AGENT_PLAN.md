@@ -140,6 +140,12 @@ Recommended frontend env variable:
 NEXT_PUBLIC_API_BASE_URL=http://localhost:4000/api
 ```
 
+Current decision:
+
+- Refund support and admin review use the project-owned FastAPI backend now.
+- Storefront product/cart/auth demo flows may stay on RouteMisr until custom ecommerce backend models are ready.
+- API ownership is documented in `docs/api_ownership.md`.
+
 ### 4. Create Feature-Based Frontend Folders
 
 The current app has many components inside `src/app/_components`. That works, but for a professional team project, use features:

@@ -113,5 +113,6 @@ See [docs/AI_SUPPORT_AGENT_PLAN.md](docs/AI_SUPPORT_AGENT_PLAN.md).
 - [Architecture](docs/architecture.md)
 - [Frontend, backend, agent, and data responsibilities](docs/RESPONSIBILITIES.md)
 - [API contract](docs/api_contract.md)
+- [API ownership and migration plan](docs/api_ownership.md)
 - [Agent workflow](docs/agent_workflow.md)
 - [AI support agent plan](docs/AI_SUPPORT_AGENT_PLAN.md)

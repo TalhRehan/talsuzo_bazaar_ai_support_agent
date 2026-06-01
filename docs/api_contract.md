@@ -118,3 +118,17 @@ GET /api/admin/refunds
 ```
 
 Returns refund decision logs for the admin dashboard.
+
+## Admin Refund Log Detail
+
+```text
+GET /api/admin/refunds/{request_id}/logs
+```
+
+Returns one refund decision log with customer/order summary, matched policy rules, agent actions, timestamp, and agent summary.
+
+## API Ownership
+
+Refund support and admin review endpoints are project-owned FastAPI endpoints.
+
+The storefront still uses the RouteMisr ecommerce API for product browsing and existing ecommerce demo flows. See [api_ownership.md](api_ownership.md) for the migration plan.
