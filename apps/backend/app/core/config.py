@@ -5,7 +5,7 @@ from pydantic_settings import BaseSettings, SettingsConfigDict
 
 
 class Settings(BaseSettings):
-    app_name: str = Field(default="TalSuzo Bazaar API", alias="APP_NAME")
+    app_name: str = Field(default="TalSuzo Bazaar Backend", alias="APP_NAME")
     environment: str = Field(default="local", alias="ENVIRONMENT")
     frontend_origin: str = Field(default="http://localhost:3000", alias="FRONTEND_ORIGIN")
     openai_api_key: str | None = Field(default=None, alias="OPENAI_API_KEY")

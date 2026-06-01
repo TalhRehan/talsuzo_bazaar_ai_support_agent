@@ -11,18 +11,18 @@ services:
       NEXTAUTH_URL: http://localhost:3000
       NEXT_PUBLIC_API_BASE_URL: http://localhost:4000/api
     depends_on:
-      - api
+      - backend
 
-  api:
+  backend:
     build:
-      context: ./apps/api
-      dockerfile: Dockerfile
-    container_name: talsuzo-bazaar-api
+      context: .
+      dockerfile: apps/backend/Dockerfile
+    container_name: talsuzo-bazaar-backend
     ports:
       - "4000:4000"
     environment:
       ENVIRONMENT: ${ENVIRONMENT:-local}
-      APP_NAME: ${APP_NAME:-TalSuzo Bazaar API}
+      APP_NAME: ${APP_NAME:-TalSuzo Bazaar Backend}
       FRONTEND_ORIGIN: http://localhost:3000
       OPENAI_API_KEY: ${OPENAI_API_KEY:-}
       OPENAI_MODEL: ${OPENAI_MODEL:-gpt-4o-mini}

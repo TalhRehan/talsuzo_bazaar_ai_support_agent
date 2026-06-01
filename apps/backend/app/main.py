@@ -26,10 +26,10 @@ app.add_middleware(
 def health_check() -> ApiResponse[dict[str, str]]:
     return ApiResponse(
         success=True,
-        message="TalSuzo Bazaar API is healthy.",
+        message="TalSuzo Bazaar backend is healthy.",
         data={
             "status": "ok",
-            "service": "talsuzo-bazaar-api",
+            "service": "talsuzo-bazaar-backend",
             "environment": settings.environment,
         },
     )

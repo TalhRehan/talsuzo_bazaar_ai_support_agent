@@ -27,8 +27,9 @@ TalSuzo Bazaar is a full-stack ecommerce application with an AI-assisted refund 
 ```text
 apps/
   web/                  Next.js ecommerce app and UI
-  api/                  FastAPI backend, agent, policy engine, data
+  backend/              FastAPI backend, agent, policy engine, data
 docker-compose.yml      Runs frontend and backend together
+requirements.txt        Python dependencies for the backend service
 README.md               Setup, architecture, API, and testing notes
 ```
 
@@ -43,7 +44,7 @@ NEXTAUTH_SECRET=replace-with-a-long-random-secret
 NEXTAUTH_URL=http://localhost:3000
 NEXT_PUBLIC_API_BASE_URL=http://localhost:4000/api
 ENVIRONMENT=local
-APP_NAME=TalSuzo Bazaar API
+APP_NAME=TalSuzo Bazaar Backend
 FRONTEND_ORIGIN=http://localhost:3000
 OPENAI_API_KEY=replace-with-your-openai-api-key
 OPENAI_MODEL=gpt-4o-mini
@@ -78,8 +79,8 @@ npm run dev
 Backend:
 
 ```bash
-cd apps/api
 pip install -r requirements.txt
+cd apps/backend
 uvicorn app.main:app --reload --port 4000
 ```
 
@@ -124,7 +125,7 @@ The LLM only writes a structured customer-friendly explanation. It cannot overri
 The policy document lives at:
 
 ```text
-apps/api/app/policies/refund_policy.md
+apps/backend/app/policies/refund_policy.md
 ```
 
 Important rules:
@@ -174,6 +175,6 @@ Example payload:
 There are two Dockerfiles because this project has two services:
 
 - `apps/web/Dockerfile` builds the Next.js frontend.
-- `apps/api/Dockerfile` builds the FastAPI backend.
+- `apps/backend/Dockerfile` builds the FastAPI backend.
 
 `docker-compose.yml` is the single entry point reviewers use to run both services together.
