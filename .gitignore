@@ -33,8 +33,6 @@ yarn-error.log*
 # env files (can opt-in for committing if needed)
 .env*
 !.env.example
-!apps/web/.env.example
-!apps/api/.env.example
 
 # generated document exports
 docs/*.pdf
