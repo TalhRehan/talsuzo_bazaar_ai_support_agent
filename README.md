@@ -29,6 +29,8 @@ apps/
   web/                  Next.js ecommerce app and UI
   backend/              FastAPI backend, agent, policy engine, data
 docker-compose.yml      Runs frontend and backend together
+.dockerignore           Shared Docker ignore rules for the full product
+.env.example            Shared environment variable template
 requirements.txt        Python dependencies for the backend service
 README.md               Setup, architecture, API, and testing notes
 ```
@@ -177,4 +179,4 @@ There are two Dockerfiles because this project has two services:
 - `apps/web/Dockerfile` builds the Next.js frontend.
 - `apps/backend/Dockerfile` builds the FastAPI backend.
 
-`docker-compose.yml` is the single entry point reviewers use to run both services together.
+`docker-compose.yml` is the single entry point reviewers use to run both services together. Both builds use the root `.dockerignore`.

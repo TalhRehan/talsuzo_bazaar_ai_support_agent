@@ -1,8 +1,8 @@
 services:
   web:
     build:
-      context: ./apps/web
-      dockerfile: Dockerfile
+      context: .
+      dockerfile: apps/web/Dockerfile
     container_name: talsuzo-bazaar-web
     ports:
       - "3000:3000"
