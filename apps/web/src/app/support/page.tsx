@@ -3,6 +3,7 @@
 import { FormEvent, useMemo, useState } from "react"
 import {
   AlertCircle,
+  Bot,
   CheckCircle2,
   ClipboardList,
   Clock3,
@@ -10,6 +11,7 @@ import {
   MessageSquareText,
   RotateCcw,
   ShieldCheck,
+  UserRound,
   XCircle,
 } from "lucide-react"
 import { submitRefundRequest, type RefundDecision } from "@/features/support/api"
@@ -96,6 +98,9 @@ export default function SupportPage() {
   }
 
   const StatusIcon = decision ? statusStyles[decision.status].icon : ClipboardList
+  const customerPreview = [form.order_id.trim(), form.product_id.trim() || form.product_name.trim(), form.reason.trim()]
+    .filter(Boolean)
+    .join(" - ")
 
   return (
     <main className="min-h-screen bg-gray-50">
@@ -127,8 +132,51 @@ export default function SupportPage() {
                 <MessageSquareText className="w-5 h-5 text-green-700" />
               </div>
               <div>
-                <h2 className="text-xl font-bold text-gray-800">Refund Request</h2>
-                <p className="text-sm text-gray-500">Use the same email and order ID from your purchase.</p>
+                <h2 className="text-xl font-bold text-gray-800">Support Chat</h2>
+                <p className="text-sm text-gray-500">Tell the agent what happened, then submit the refund details.</p>
+              </div>
+            </div>
+
+            <div className="px-6 pt-6">
+              <div className="rounded-xl border border-gray-200 bg-gray-50 overflow-hidden">
+                <div className="bg-[#1a2332] px-5 py-3 flex items-center gap-2">
+                  <span className="h-2.5 w-2.5 rounded-full bg-green-400" />
+                  <span className="text-sm font-semibold text-white">TalSuzo Refund Agent</span>
+                </div>
+
+                <div className="p-5 space-y-4">
+                  <ChatMessage
+                    role="agent"
+                    message="Hi, I can help check your refund request against TalSuzo Bazaar policy. Please enter your email, order ID, product, and reason below."
+                  />
+
+                  {customerPreview && (
+                    <ChatMessage
+                      role="customer"
+                      message={`I need help with ${customerPreview}.`}
+                    />
+                  )}
+
+                  {isSubmitting && (
+                    <ChatMessage
+                      role="agent"
+                      message="I am checking the customer record, order details, refund policy, and risk rules now."
+                      loading
+                    />
+                  )}
+
+                  {decision && (
+                    <ChatMessage
+                      role="agent"
+                      message={decision.agent_summary ?? decision.reason}
+                      status={statusStyles[decision.status].label}
+                    />
+                  )}
+
+                  {error && (
+                    <ChatMessage role="agent" message={error} status="Needs attention" />
+                  )}
+                </div>
               </div>
             </div>
 
@@ -283,9 +331,7 @@ export default function SupportPage() {
                   "High-value or risky account review",
                 ].map((item) => (
                   <div key={item} className="flex items-center gap-3 text-sm text-gray-600">
-                    <span className="w-5 h-5 rounded-full bg-green-100 text-green-700 flex items-center justify-center text-xs font-bold">
-                      ✓
-                    </span>
+                    <CheckCircle2 className="w-5 h-5 text-green-600" />
                     {item}
                   </div>
                 ))}
@@ -317,5 +363,54 @@ function Field({
       </span>
       {children}
     </label>
+  )
+}
+
+function ChatMessage({
+  role,
+  message,
+  loading,
+  status,
+}: {
+  role: "agent" | "customer"
+  message: string
+  loading?: boolean
+  status?: string
+}) {
+  const isAgent = role === "agent"
+  const Icon = isAgent ? Bot : UserRound
+
+  return (
+    <div className={`flex gap-3 ${isAgent ? "justify-start" : "justify-end"}`}>
+      {isAgent && (
+        <div className="w-9 h-9 rounded-full bg-green-100 text-green-700 flex items-center justify-center flex-shrink-0">
+          <Icon className="w-4 h-4" />
+        </div>
+      )}
+
+      <div
+        className={`max-w-[82%] rounded-xl px-4 py-3 text-sm leading-6 ${
+          isAgent
+            ? "bg-white border border-gray-200 text-gray-700"
+            : "bg-green-600 text-white"
+        }`}
+      >
+        {status && (
+          <div className={`mb-1 text-xs font-bold ${isAgent ? "text-green-700" : "text-green-50"}`}>
+            {status}
+          </div>
+        )}
+        <div className="flex items-start gap-2">
+          {loading && <Loader2 className="w-4 h-4 animate-spin mt-1 flex-shrink-0" />}
+          <span>{message}</span>
+        </div>
+      </div>
+
+      {!isAgent && (
+        <div className="w-9 h-9 rounded-full bg-green-600 text-white flex items-center justify-center flex-shrink-0">
+          <Icon className="w-4 h-4" />
+        </div>
+      )}
+    </div>
   )
 }
