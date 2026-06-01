@@ -113,7 +113,7 @@ talsuzo-bazaar/
   README.md
 ```
 
-The current frontend can remain in the root during early development. For the final professional submission, moving it into `apps/web` is recommended.
+The frontend has been moved into `apps/web` for the final professional submission structure.
 
 ## Milestone 1: Project Foundation and Architecture
 

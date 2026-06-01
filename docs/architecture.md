@@ -17,7 +17,7 @@ Customer
 
 ## Frontend
 
-The existing Next.js app remains the customer-facing ecommerce shop.
+The Next.js app lives in `apps/web` and is the customer-facing ecommerce shop.
 
 Responsibilities:
 
@@ -86,6 +86,6 @@ backend:  http://localhost:4000
 docs:     http://localhost:4000/docs
 ```
 
-The frontend service is built from the root `Dockerfile`. It runs the existing Next.js ecommerce app.
+The frontend service is built from `apps/web/Dockerfile`. It runs the existing Next.js ecommerce app.
 
 The backend service is built from `apps/api/Dockerfile`. It runs FastAPI, serves refund support endpoints, loads synthetic JSON data, and exposes generated API documentation through Swagger UI.

@@ -47,6 +47,7 @@ The backend will use the stack that best matches the project direction and Talha
 Run the frontend locally without Docker:
 
 ```bash
+cd apps/web
 npm install
 npm run dev
 ```
@@ -60,6 +61,7 @@ http://localhost:3000
 Check code:
 
 ```bash
+cd apps/web
 npm run lint
 npm run build
 ```
@@ -113,7 +115,7 @@ OpenAI is used only for structured decision summaries. If `OPENAI_API_KEY` is em
 ## Planned Architecture
 
 ```text
-current root frontend/Next.js app
+apps/web Next.js app
   Customer shop UI
   Refund chat UI
   Admin dashboard UI
@@ -142,7 +144,7 @@ data layer
 ```text
 docker-compose.yml
   web service
-    builds from ./Dockerfile
+    builds from ./apps/web/Dockerfile
     serves Next.js on port 3000
     calls FastAPI through NEXT_PUBLIC_API_BASE_URL
 

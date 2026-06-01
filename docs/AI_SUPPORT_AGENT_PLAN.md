@@ -75,7 +75,7 @@ talsuzo-bazaar/
   README.md
 ```
 
-For now, the current Next.js app can remain where it is. Later, when the backend starts, move it into `apps/web` only if you want the cleanest final repo.
+The current Next.js app has been moved into `apps/web` for the final professional repo layout.
 
 ## Frontend Modifications Needed
 

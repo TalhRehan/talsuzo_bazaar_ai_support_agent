@@ -1,8 +1,6 @@
 # Web App
 
-The customer-facing Next.js ecommerce shop currently lives at the project root.
-
-This folder marks the planned final home for the frontend when the repository is converted into a full monorepo layout.
+This folder contains the customer-facing Next.js ecommerce shop for TalSuzo Bazaar.
 
 ## Folder Structure
 
@@ -16,14 +14,13 @@ apps/web/
     types/
 ```
 
-## Current Frontend Location
+## Local Commands
 
-```text
-src/
-public/
-package.json
-next.config.ts
-tsconfig.json
+```bash
+npm install
+npm run dev
+npm run lint
+npm run build
 ```
 
 ## Frontend Responsibilities
@@ -46,4 +43,4 @@ NEXTAUTH_URL=http://localhost:3000
 NEXT_PUBLIC_API_BASE_URL=http://localhost:4000/api
 ```
 
-The active frontend currently runs from the project root, so the root `.env.example` also contains the same frontend variables.
+The root `.env.example` also contains these variables for Docker Compose.
