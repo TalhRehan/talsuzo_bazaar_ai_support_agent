@@ -1,0 +1,8 @@
+fastapi
+uvicorn[standard]
+pydantic
+pydantic-settings
+email-validator
+pytest
+langgraph
+langchain-openai

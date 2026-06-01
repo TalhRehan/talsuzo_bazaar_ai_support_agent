@@ -1,0 +1,508 @@
+[
+  {
+    "order_id": "ORD-5001",
+    "customer_id": "CUS-1001",
+    "products": [
+      {
+        "product_id": "PROD-2001",
+        "name": "Noise-Canceling Wireless Headphones",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 129.99,
+        "total_price": 129.99,
+        "final_sale": false,
+        "condition_on_delivery": "damaged"
+      }
+    ],
+    "subtotal": 129.99,
+    "shipping_fee": 0,
+    "tax": 10.4,
+    "total_price": 140.39,
+    "currency": "USD",
+    "order_date": "2026-05-20",
+    "delivered_at": "2026-05-24",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["normal_eligible", "damaged_item", "inside_30_days"]
+  },
+  {
+    "order_id": "ORD-5002",
+    "customer_id": "CUS-1002",
+    "products": [
+      {
+        "product_id": "PROD-2002",
+        "name": "Designer Sunglasses - Final Sale",
+        "category": "Fashion",
+        "quantity": 1,
+        "unit_price": 89.5,
+        "total_price": 89.5,
+        "final_sale": true,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 89.5,
+    "shipping_fee": 6.99,
+    "tax": 7.16,
+    "total_price": 103.65,
+    "currency": "USD",
+    "order_date": "2026-05-10",
+    "delivered_at": "2026-05-14",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "paypal",
+    "scenario_tags": ["final_sale_denial", "inside_30_days"]
+  },
+  {
+    "order_id": "ORD-5003",
+    "customer_id": "CUS-1003",
+    "products": [
+      {
+        "product_id": "PROD-2003",
+        "name": "Ceramic Dinnerware Set",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 74.99,
+        "total_price": 74.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 74.99,
+    "shipping_fee": 8.99,
+    "tax": 6.0,
+    "total_price": 89.98,
+    "currency": "USD",
+    "order_date": "2026-04-18",
+    "delivered_at": "2026-04-22",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "debit_card",
+    "scenario_tags": ["inside_45_days", "buyer_remorse_possible_denial"]
+  },
+  {
+    "order_id": "ORD-5004",
+    "customer_id": "CUS-1004",
+    "products": [
+      {
+        "product_id": "PROD-2004",
+        "name": "Smart Fitness Watch",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 219.99,
+        "total_price": 219.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 219.99,
+    "shipping_fee": 0,
+    "tax": 17.6,
+    "total_price": 237.59,
+    "currency": "USD",
+    "order_date": "2026-05-25",
+    "delivered_at": "2026-05-28",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["high_risk_customer", "escalation_candidate"]
+  },
+  {
+    "order_id": "ORD-5005",
+    "customer_id": "CUS-1005",
+    "products": [
+      {
+        "product_id": "PROD-2005",
+        "name": "Leather Travel Backpack",
+        "category": "Fashion",
+        "quantity": 1,
+        "unit_price": 159.0,
+        "total_price": 159.0,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      },
+      {
+        "product_id": "PROD-2006",
+        "name": "Packing Cube Set",
+        "category": "Travel",
+        "quantity": 1,
+        "unit_price": 24.99,
+        "total_price": 24.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 183.99,
+    "shipping_fee": 0,
+    "tax": 14.72,
+    "total_price": 198.71,
+    "currency": "USD",
+    "order_date": "2026-05-04",
+    "delivered_at": "2026-05-08",
+    "delivery_status": "delivered",
+    "refund_status": "approved",
+    "payment_method": "credit_card",
+    "scenario_tags": ["already_refunded", "duplicate_request_denial"]
+  },
+  {
+    "order_id": "ORD-5006",
+    "customer_id": "CUS-1006",
+    "products": [
+      {
+        "product_id": "PROD-2007",
+        "name": "Gaming Keyboard",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 119.99,
+        "total_price": 119.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 119.99,
+    "shipping_fee": 5.99,
+    "tax": 9.6,
+    "total_price": 135.58,
+    "currency": "USD",
+    "order_date": "2026-05-18",
+    "delivered_at": "2026-05-21",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["suspended_account", "manual_review_required"]
+  },
+  {
+    "order_id": "ORD-5007",
+    "customer_id": "CUS-1007",
+    "products": [
+      {
+        "product_id": "PROD-2008",
+        "name": "Organic Skincare Bundle",
+        "category": "Beauty & Health",
+        "quantity": 1,
+        "unit_price": 54.99,
+        "total_price": 54.99,
+        "final_sale": false,
+        "condition_on_delivery": "damaged"
+      }
+    ],
+    "subtotal": 54.99,
+    "shipping_fee": 4.99,
+    "tax": 4.4,
+    "total_price": 64.38,
+    "currency": "USD",
+    "order_date": "2026-05-27",
+    "delivered_at": "2026-05-30",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "apple_pay",
+    "scenario_tags": ["normal_eligible", "damaged_item", "inside_30_days"]
+  },
+  {
+    "order_id": "ORD-5008",
+    "customer_id": "CUS-1008",
+    "products": [
+      {
+        "product_id": "PROD-2009",
+        "name": "Bluetooth Home Speaker",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 84.99,
+        "total_price": 84.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 84.99,
+    "shipping_fee": 6.99,
+    "tax": 6.8,
+    "total_price": 98.78,
+    "currency": "USD",
+    "order_date": "2026-03-10",
+    "delivered_at": "2026-03-14",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["outside_30_days", "late_request_denial"]
+  },
+  {
+    "order_id": "ORD-5009",
+    "customer_id": "CUS-1009",
+    "products": [
+      {
+        "product_id": "PROD-2010",
+        "name": "Running Shoes",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 112.0,
+        "total_price": 112.0,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 112.0,
+    "shipping_fee": 0,
+    "tax": 8.96,
+    "total_price": 120.96,
+    "currency": "USD",
+    "order_date": "2026-05-16",
+    "delivered_at": "2026-05-19",
+    "delivery_status": "delivered",
+    "refund_status": "pending",
+    "payment_method": "paypal",
+    "scenario_tags": ["existing_pending_refund", "duplicate_request_escalation"]
+  },
+  {
+    "order_id": "ORD-5010",
+    "customer_id": "CUS-1010",
+    "products": [
+      {
+        "product_id": "PROD-2011",
+        "name": "Desk Lamp",
+        "category": "Home Office",
+        "quantity": 1,
+        "unit_price": 39.99,
+        "total_price": 39.99,
+        "final_sale": false,
+        "condition_on_delivery": "not_delivered"
+      }
+    ],
+    "subtotal": 39.99,
+    "shipping_fee": 4.99,
+    "tax": 3.2,
+    "total_price": 48.18,
+    "currency": "USD",
+    "order_date": "2026-05-29",
+    "delivered_at": null,
+    "delivery_status": "in_transit",
+    "refund_status": "not_requested",
+    "payment_method": "debit_card",
+    "scenario_tags": ["not_delivered_yet", "shipping_issue_escalation"]
+  },
+  {
+    "order_id": "ORD-5011",
+    "customer_id": "CUS-1011",
+    "products": [
+      {
+        "product_id": "PROD-2012",
+        "name": "Glass Coffee Table",
+        "category": "Furniture",
+        "quantity": 1,
+        "unit_price": 349.99,
+        "total_price": 349.99,
+        "final_sale": false,
+        "condition_on_delivery": "damaged"
+      }
+    ],
+    "subtotal": 349.99,
+    "shipping_fee": 29.99,
+    "tax": 28.0,
+    "total_price": 407.98,
+    "currency": "USD",
+    "order_date": "2026-05-12",
+    "delivered_at": "2026-05-18",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["damaged_item", "high_value_escalation"]
+  },
+  {
+    "order_id": "ORD-5012",
+    "customer_id": "CUS-1012",
+    "products": [
+      {
+        "product_id": "PROD-2013",
+        "name": "Premium Espresso Machine",
+        "category": "Kitchen",
+        "quantity": 1,
+        "unit_price": 699.99,
+        "total_price": 699.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 699.99,
+    "shipping_fee": 0,
+    "tax": 56.0,
+    "total_price": 755.99,
+    "currency": "USD",
+    "order_date": "2026-05-22",
+    "delivered_at": "2026-05-26",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["high_value_escalation", "vip_customer"]
+  },
+  {
+    "order_id": "ORD-5013",
+    "customer_id": "CUS-1013",
+    "products": [
+      {
+        "product_id": "PROD-2014",
+        "name": "Smartphone Case",
+        "category": "Accessories",
+        "quantity": 2,
+        "unit_price": 19.99,
+        "total_price": 39.98,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 39.98,
+    "shipping_fee": 3.99,
+    "tax": 3.2,
+    "total_price": 47.17,
+    "currency": "USD",
+    "order_date": "2026-05-30",
+    "delivered_at": "2026-06-01",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "gift_card",
+    "scenario_tags": ["high_risk_customer", "gift_card_payment", "manual_review_required"]
+  },
+  {
+    "order_id": "ORD-5014",
+    "customer_id": "CUS-1014",
+    "products": [
+      {
+        "product_id": "PROD-2015",
+        "name": "Kids Educational Tablet",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 149.99,
+        "total_price": 149.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 149.99,
+    "shipping_fee": 0,
+    "tax": 12.0,
+    "total_price": 161.99,
+    "currency": "USD",
+    "order_date": "2026-05-03",
+    "delivered_at": "2026-05-07",
+    "delivery_status": "delivered",
+    "refund_status": "denied",
+    "payment_method": "credit_card",
+    "scenario_tags": ["previously_denied", "duplicate_request_denial"]
+  },
+  {
+    "order_id": "ORD-5015",
+    "customer_id": "CUS-1015",
+    "products": [
+      {
+        "product_id": "PROD-2016",
+        "name": "4K Action Camera",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 299.99,
+        "total_price": 299.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      },
+      {
+        "product_id": "PROD-2017",
+        "name": "Waterproof Camera Case",
+        "category": "Accessories",
+        "quantity": 1,
+        "unit_price": 44.99,
+        "total_price": 44.99,
+        "final_sale": true,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 344.98,
+    "shipping_fee": 0,
+    "tax": 27.6,
+    "total_price": 372.58,
+    "currency": "USD",
+    "order_date": "2026-05-21",
+    "delivered_at": "2026-05-25",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["mixed_final_sale_items", "partial_refund_possible", "high_value_escalation"]
+  },
+  {
+    "order_id": "ORD-5016",
+    "customer_id": "CUS-1001",
+    "products": [
+      {
+        "product_id": "PROD-2018",
+        "name": "Cotton Bed Sheet Set",
+        "category": "Home",
+        "quantity": 1,
+        "unit_price": 64.99,
+        "total_price": 64.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 64.99,
+    "shipping_fee": 5.99,
+    "tax": 5.2,
+    "total_price": 76.18,
+    "currency": "USD",
+    "order_date": "2026-01-15",
+    "delivered_at": "2026-01-19",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "credit_card",
+    "scenario_tags": ["outside_30_days", "old_order_denial"]
+  },
+  {
+    "order_id": "ORD-5017",
+    "customer_id": "CUS-1002",
+    "products": [
+      {
+        "product_id": "PROD-2019",
+        "name": "Wireless Mouse",
+        "category": "Electronics",
+        "quantity": 1,
+        "unit_price": 34.99,
+        "total_price": 34.99,
+        "final_sale": false,
+        "condition_on_delivery": "lost"
+      }
+    ],
+    "subtotal": 34.99,
+    "shipping_fee": 4.99,
+    "tax": 2.8,
+    "total_price": 42.78,
+    "currency": "USD",
+    "order_date": "2026-05-19",
+    "delivered_at": null,
+    "delivery_status": "lost",
+    "refund_status": "not_requested",
+    "payment_method": "paypal",
+    "scenario_tags": ["lost_shipment", "carrier_review", "escalation_candidate"]
+  },
+  {
+    "order_id": "ORD-5018",
+    "customer_id": "CUS-1011",
+    "products": [
+      {
+        "product_id": "PROD-2020",
+        "name": "Yoga Mat",
+        "category": "Sports",
+        "quantity": 1,
+        "unit_price": 29.99,
+        "total_price": 29.99,
+        "final_sale": false,
+        "condition_on_delivery": "good"
+      }
+    ],
+    "subtotal": 29.99,
+    "shipping_fee": 3.99,
+    "tax": 2.4,
+    "total_price": 36.38,
+    "currency": "USD",
+    "order_date": "2026-05-11",
+    "delivered_at": "2026-05-15",
+    "delivery_status": "delivered",
+    "refund_status": "not_requested",
+    "payment_method": "store_credit",
+    "scenario_tags": ["store_credit_payment", "low_value", "inside_30_days"]
+  }
+]
